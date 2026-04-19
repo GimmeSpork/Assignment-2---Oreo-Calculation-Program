@@ -1,80 +1,51 @@
-// ------------- FILE HEADER -------------
-// Author ✅: 
-// Assignment ✅:
-// Date ✅:
-// Citations: 
-
-
-// ------------- ZYBOOKS SCORES -------------
-// Chapter ✅: 
-// Participation ✅: 
-// Challenge ✅:
-// Labs ✅:
-
-
-// ------------- DISCORD POSTS -------------
-// https://discord.com/invite/URYKKf8YHm
-// Count ✅:
-// Links (Optional): 
-
-
-// ------------- DESIGN DOCUMENT -------------
-// A. INPUT ✅: 
-// B. OUTPUT ✅:
-// C. CALCULATIONS ✅:
-// D. LOGIC and ALGORITHMS ✅:
-//    (Optional) flow chart link or file name: 
-
-
-// ------------- TESTING -------------
-// PASS ALL GIVEN SAMPLE RUN TESTS ✅: 
-// (Optional) Additional tests count:   
-
-
-// ------------- CODE -------------
+/******************************************************************************
+# Author:           Lucy Price
+# Assignment:       Assignment 2 - Oreo Calculation Program
+# Date:             April 18, 2026
+# Description:      This Program will calculate the number of calories and
+#                   servings consumed by the user after they input the number
+#                   of Oreo cookies they consumed.
+# Input:            numCookies as int
+# Output:           numServings and numCalories as doubles
+# Sources:          Assignment 2 resources, example code, & algorithm document
+#******************************************************************************/
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
-// Function prototypes (if any)
+//main function
+int main() {
 
+//declare variables
+const int CALORIESC = 160;
+const int SERVINGSC = 5;
+int numCookies = 0;
+double numCalories = 0.0;
+double numServings = 0.0;
+ 
+//user input and welcome message
+cout << "Welcome to the Oreo Calculation Program!" << endl;
+cout << endl;
+cout << "How many Oreos have you eaten?: ";
+cin >> numCookies;
+cout << endl;
 
-// Main function
-// https://en.cppreference.com/w/cpp/language/main_function.html
-int main(int argc, char* argv[]) {
-  cout << "Hello, World!" << endl;
+//calculations
+numServings = static_cast<double> (numCookies) / SERVINGSC;
+numCalories = numServings * CALORIESC;
+
+//output to user
+//set fixed and output to one decimal point
+cout << fixed << showpoint << setprecision(1);
+cout << "You have consumed:" << endl;
+cout << endl;
+cout << numServings << " Servings" << endl;
+cout << numCalories << " Calories" << endl;
+cout << endl;
+cout << "Enjoy!" << endl;
+cout << endl;
+
   return 0;
 }
 
-// Function implementations (if any)
 
-
-// ------------- DESIGN -------------
-/* 
-Program Name:
-
-Program Description:
-
-Design:
-A. INPUT
-Define the input variables including name data type. 
-
-B. OUTPUT
-Define the output variables including data types. 
-
-C. CALCULATIONS
-Describe calculations used by algorithms in step D.  
-List all formulas. 
-If there are no calculations needed, state there are no calculations.
-
-D. LOGIC and ALGORITHMS
-Design the logic of your program using pseudocode or flowcharts. 
-Use conditionals, loops, functions or array constructs.
-List the steps in transforming inputs into outputs. 
-https://github.com/Glen-Sasek-PCC-Instructor/2025-06-22/blob/main/Pseudocode-Reference.txt
-
-
-SAMPLE RUNS
-Copy from assignment document.
-
-*/
